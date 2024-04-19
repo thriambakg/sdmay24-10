@@ -1,0 +1,5 @@
+- [[Learn AI]]
+- Find [[public datasets]]
+- Create an AI to predict cancer presence from public dataset
+- Research in detail what cancer is/what causes it
+	- Use this research to enhance the AI
