@@ -41,7 +41,7 @@ async function handleSubmit() {
 function registerStatus()
 {
     
-        register = true;
+       register = !register;
     
 
 }
