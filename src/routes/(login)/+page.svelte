@@ -82,8 +82,15 @@ function resetForm() {
       outline: none;
     }
     
-    input[type=password]:focus {
-      border: 3px solid #888;
+    input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 3px solid #ccc;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      outline: none;
     }
     </style>
     <form on:submit|preventDefault={handleSubmit}>
