@@ -103,7 +103,6 @@ function resetForm() {
         {#if register}
             <label class="text-gray-600 mb-4">
                 <input
-                    border
                     bind:value={confirmPassword}
                     type="password"
                     placeholder="Confirm Password"
