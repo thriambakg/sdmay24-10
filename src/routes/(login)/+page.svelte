@@ -39,7 +39,7 @@ async function handleSubmit() {
 }
 
 function resetForm() {
-    register = false;
+    //register = false;
     email = "";
     password = "";
     confirmPassword = "";
