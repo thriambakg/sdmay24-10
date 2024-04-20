@@ -31,7 +31,7 @@ async function handleSubmit() {
     } catch (err) {
         console.log(err);
         if (err instanceof Error) {
-            errorMessage = getErrorMessage(err.message);
+            errorMessage = err.message;
         } else {
             errorMessage = "An error occurred";
         }
@@ -46,18 +46,18 @@ function resetForm() {
     errorMessage = "";
 }
 
-function getErrorMessage(message: String) {
-    switch (message) {
-        case "Firebase: Error (auth/email-already-in-use).":
-            return "Email already in use";
-        case "Firebase: Error (auth/invalid-email).":
-            return "Invalid email";
-        case "Firebase: Password should be at least 6 characters (auth/weak-password).":
-            return "Password must be at least 6 characters";
-        default:
-            return "Incorrect Email or Password";
-    }
-}
+// function getErrorMessage(message: String) {
+//     switch (message) {
+//         case "Firebase: Error (auth/email-already-in-use).":
+//             return "Email already in use";
+//         case "Firebase: Error (auth/invalid-email).":
+//             return "Invalid email";
+//         case "Firebase: Password should be at least 6 characters (auth/weak-password).":
+//             return "Password must be at least 6 characters";
+//         default:
+//             return "Incorrect Email or Password";
+//     }
+// }
 </script>
 
 <div class="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-xl">
