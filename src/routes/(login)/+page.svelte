@@ -40,7 +40,14 @@ async function handleSubmit() {
 
 function registerStatus()
 {
-    register = true;
+    if (register = false)
+    {
+        register = true;
+    }
+    if (register = true)
+    {
+        register = false;
+    }
 }
 
 function resetForm() {
@@ -94,6 +101,7 @@ function resetForm() {
         {#if errorMessage}
             <div class="text-red-500 text-sm mb-4">{errorMessage}</div>
         {/if}
+        <div></div>
         <button
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             type="submit"
