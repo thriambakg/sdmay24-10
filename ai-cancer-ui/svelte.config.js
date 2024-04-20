@@ -21,7 +21,6 @@
 import adapter from '@sveltejs/adapter-static';
 //code 4-19 start
 import { defineConfig } from 'vite';
-import svelte from '@sveltejs/vite-plugin-svelte';
 //code 4-19 end
 
 /** @type {import('@sveltejs/kit').Config} */
