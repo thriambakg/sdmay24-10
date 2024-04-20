@@ -37,8 +37,6 @@ const config = {
     		}),
         // code 4-19 start
     prerender: {
-      // Other prerender options
-      onError: 'continue', // or 'fail'
       // Implement handleHttpError to suppress or handle errors
       handleHttpError: async ({ request, resolve, render }) => {
         const response = await resolve(request);
