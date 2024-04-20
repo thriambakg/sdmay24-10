@@ -71,7 +71,7 @@ function resetForm() {
 <div class="max-w-md mx-auto mt-8 p-6 bg-white rounded-lg shadow-xl">
     <h1 class="text-2xl font-bold mb-4">{register ? "Register" : "Log in"}</h1>
     <style> 
-    input[type=text] {
+    input[type=email] {
       width: 100%;
       padding: 12px 20px;
       margin: 8px 0;
@@ -82,13 +82,13 @@ function resetForm() {
       outline: none;
     }
     
-    input[type=text]:focus {
+    input[type=password]:focus {
       border: 3px solid #888;
     }
     </style>
     <form on:submit|preventDefault={handleSubmit}>
         <label class="text-gray-600 mb-4">
-            <input bind:value={email} type="text" placeholder="Email" required />
+            <input bind:value={email} type="email" placeholder="Email" required />
         </label>
         <div />
         <label class="text-gray-600 mb-4">
