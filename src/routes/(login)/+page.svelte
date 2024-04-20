@@ -88,7 +88,7 @@ function resetForm() {
     </style>
     <form on:submit|preventDefault={handleSubmit}>
         <label class="text-gray-600 mb-4">
-            <input bind:value={email} type="email" placeholder="Email" required />
+            <input bind:value={email} type="text" placeholder="Email" required />
         </label>
         <div />
         <label class="text-gray-600 mb-4">
