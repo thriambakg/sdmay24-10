@@ -19,6 +19,10 @@
 // export default config;
 
 import adapter from '@sveltejs/adapter-static';
+//code 4-19 start
+import { defineConfig } from 'vite';
+import svelte from '@sveltejs/vite-plugin-svelte';
+//code 4-19 end
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -31,7 +35,22 @@ const config = {
     			fallback: undefined,
     			precompress: false,
     			strict: true
-    		})
+    		}),
+        // code 4-19 start
+    prerender: {
+      // Other prerender options
+      onError: 'continue', // or 'fail'
+      // Implement handleHttpError to suppress or handle errors
+      handleHttpError: async ({ request, resolve, render }) => {
+        const response = await resolve(request);
+        if (response) {
+          return response;
+        }
+
+        return render(request);
+      },
+    },
+        // code 4-19 end
     	}
 };
 
