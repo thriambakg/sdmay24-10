@@ -8,7 +8,7 @@ let email = "";
 let password = "";
 let confirmPassword = "";
 let errorMessage = "";
-
+let message = "";
 const isLoggedIn = derived(authStore, ($authStore) => !!$authStore);
 
 async function handleSubmit() {
@@ -46,7 +46,7 @@ function resetForm() {
     errorMessage = "";
 }
 
-function getErrorMessage(message: string) {
+function getErrorMessage(message: String) {
     switch (message) {
         case "Firebase: Error (auth/email-already-in-use).":
             return "Email already in use";
