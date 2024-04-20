@@ -38,8 +38,13 @@ async function handleSubmit() {
     }
 }
 
-function resetForm() {
+function register()
+{
     register = true;
+}
+
+function resetForm() {
+    register = false;
     email = "";
     password = "";
     confirmPassword = "";
@@ -96,7 +101,7 @@ function resetForm() {
             Submit
         </button>
     </form>
-    <div class="mt-4 cursor-pointer text-blue-500" on:click={resetForm}>
+    <div class="mt-4 cursor-pointer text-blue-500" on:click={register}>
         {register ? "Already have an account? Log in" : "Don't have an account? Sign Up"}
     </div>
 </div>
