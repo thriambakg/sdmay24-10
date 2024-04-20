@@ -18,37 +18,14 @@
 
 // export default config;
 
-import adapter from '@sveltejs/adapter-static';
-//code 4-19 start
-import { defineConfig } from 'vite';
-//code 4-19 end
+import adapter from "svelte-kit-sst";
+import { vitePreprocess } from "@sveltejs/kit/vite";
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
-    kit: {
-    		adapter: adapter({
-    			// default options are shown. On some platforms
-    			// these options are set automatically — see below
-    			pages: 'build',
-    			assets: 'build',
-    			fallback: undefined,
-    			precompress: false,
-    			strict: true
-    		}),
-        // code 4-19 start
-    prerender: {
-      // Implement handleHttpError to suppress or handle errors
-      handleHttpError: async ({ request, resolve, render }) => {
-        const response = await resolve(request);
-        if (response) {
-          return response;
-        }
-
-        return render(request);
-      },
-    },
-        // code 4-19 end
-    	}
+  preprocess: vitePreprocess(),
+  kit: {
+    adapter: adapter(),
+  },
 };
 
 export default config;
