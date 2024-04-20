@@ -18,25 +18,12 @@
 
 // export default config;
 
-import adapter from "svelte-kit-sst";
-import { vitePreprocess } from "@sveltejs/kit/vite";
+import adapter from '@sveltejs/adapter-netlify';
 
 const config = {
-  preprocess: vitePreprocess(),
   kit: {
-    adapter: adapter(),
-prerender: {
-			handleHttpError: ({ path, referrer, message }) => {
-				// ignore deliberate link to shiny 404 page
-				if (path === '/not-found' && referrer === '/') {
-					return;
-				}
-
-				// otherwise fail the build
-				throw new Error(message);
-			}
-		}    
-  },
+    adapter: adapter()
+  }
 };
 
 export default config;
