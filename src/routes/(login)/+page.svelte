@@ -40,14 +40,10 @@ async function handleSubmit() {
 
 function registerStatus()
 {
-    if (register = false)
-    {
+    
         register = true;
-    }
-    if (register = true)
-    {
-        register = false;
-    }
+    
+
 }
 
 function resetForm() {
