@@ -1,7 +1,0 @@
-- [Kaggle](https://www.kaggle.com/)
-- [UCI Irvine Machine Learning Repository](https://archive.ics.uci.edu/)
-- [Cancer Genome Atlas](https://www.genome.gov/Funded-Programs-Projects/Cancer-Genome-Atlas) (or [cancer.gov](https://www.cancer.gov/ccg/research/genome-sequencing/tcga) route to access)
-- [SEER](https://seer.cancer.gov/) (Surveillance, Epidemiology, and End Results)
-- [NCBI](https://www.ncbi.nlm.nih.gov/) (National Center for Biotechnology Information)
-- Cancer Imaging Archive ([Google Cloud](https://cloud.google.com/healthcare-api/docs/resources/public-datasets/idc), [cancer.gov](https://imaging.cancer.gov/informatics/cancer_imaging_archive.htm), [NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3824915/))
-- [Data.gov](https://data.gov/)
